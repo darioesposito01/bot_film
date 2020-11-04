@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
 from selenium import *
-import re
+
 token = "1204302236:AAEbjN95KA2OYM1G1BedjcYO_9JuQCOnxiI"
 
 caratteri_da_eliminare = [":", ";",",",".","–"," "]
