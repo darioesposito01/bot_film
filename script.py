@@ -16,6 +16,8 @@ caratteri_da_eliminare = [":", ";",",",".","–"," "]
 link_try = "prova"
 bot = telegram.Bot(token = token)
 
+GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 
 def ottieni_link(nome_film):
     link_da_mand = ""
@@ -26,7 +28,11 @@ def ottieni_link(nome_film):
     opt = Options()
     opt.add_argument("--headless")
     opt.add_argument("--window-size=5000,2800")
-    driver = webdriver.Chrome(options=opt)
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--no-sandbox')
+    opt.binary_location = GOOGLE_CHROME_PATH
+    driver = webdriver.Chrome(execution_path = CHROMEDRIVER_PATH, options=opt)
+  
     #driver.maximize_window()
 
     driver.get("https://altadefinizione.dance/")
