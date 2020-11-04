@@ -188,7 +188,6 @@ disp= updater.dispatcher
 hand= MessageHandler(Filters.text, send)
 disp.add_handler(hand)
 updater.start_polling()
-updater.idle()
 
 
 
