@@ -26,7 +26,7 @@ def ottieni_link(nome_film):
     opt = Options()
     opt.add_argument("--headless")
     opt.add_argument("--window-size=5000,2800")
-    driver = webdriver.Chrome(executable_path= r"/Users/darioesposito/Downloads/chromedriver", options=opt)
+    driver = webdriver.Chrome(options=opt)
     #driver.maximize_window()
 
     driver.get("https://altadefinizione.dance/")
