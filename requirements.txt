@@ -1,2 +1,2 @@
 selenium
-telegram-python-bot
+python-telegram-bot
