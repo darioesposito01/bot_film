@@ -193,10 +193,7 @@ updater = Updater(token=token, use_context=True)
 disp= updater.dispatcher
 hand= MessageHandler(Filters.text, send)
 disp.add_handler(hand)
-updater.start_webhook(listen="0.0.0.0",
-                          port=int(PORT),
-                          url_path=token)
-updater.bot.setWebhook('https://filmbotbeta.herokuapp.com/' + token)
+updater.start_polling()
 
 
 
