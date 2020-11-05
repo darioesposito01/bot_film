@@ -2,7 +2,7 @@
 import telegram
 from telegram.ext import Updater, CommandHandler,MessageHandler, Filters
 from selenium import webdriver
-
+import os
 import time
 
 from selenium.webdriver.common.keys import Keys
@@ -15,7 +15,7 @@ token = "1439804208:AAGX1fmKci_dthBL0UsZEO6ayCidDYyafNs"
 caratteri_da_eliminare = [":", ";",",",".","–"," "]
 link_try = "prova"
 bot = telegram.Bot(token = token)
-
+PORT = int(os.environ.get('PORT', 5000))
 GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 
@@ -193,7 +193,10 @@ updater = Updater(token=token, use_context=True)
 disp= updater.dispatcher
 hand= MessageHandler(Filters.text, send)
 disp.add_handler(hand)
-updater.start_polling()
+updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path=token)
+updater.bot.setWebhook('https://filmbotbeta.herokuapp.com/' + token)
 
 
 
