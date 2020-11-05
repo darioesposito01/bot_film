@@ -28,8 +28,8 @@ def ottieni_link(nome_film):
     opt = Options()
     opt.add_argument("--headless")
     opt.add_argument("--window-size=5000,2800")
-    chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument('--no-sandbox')
+    opt.add_argument('--disable-gpu')
+    opt.add_argument('--no-sandbox')
     opt.binary_location = GOOGLE_CHROME_PATH
     driver = webdriver.Chrome(execution_path = CHROMEDRIVER_PATH, options=opt)
   
