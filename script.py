@@ -16,7 +16,7 @@ caratteri_da_eliminare = [":", ";",",",".","–"," "]
 link_try = "prova"
 bot = telegram.Bot(token = token)
 PORT = int(os.environ.get('PORT', 5000))
-GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google-chrome'
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 
 def ottieni_link(nome_film):
@@ -30,7 +30,10 @@ def ottieni_link(nome_film):
     opt.add_argument("--window-size=5000,2800")
     opt.add_argument('--disable-gpu')
     opt.add_argument('--no-sandbox')
-    opt.binary_location = GOOGLE_CHROME_PATH
+    
+    
+    chrome_bin = os.environ.get('GOOGLE_CHROME_PATH', None)
+    opt.binary_location = chrome_bin
     driver = webdriver.Chrome(executable_path= CHROMEDRIVER_PATH, options=opt)
   
     #driver.maximize_window()
