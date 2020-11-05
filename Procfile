@@ -1,1 +1,1 @@
-app: python script
+worker: python script
