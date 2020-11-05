@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 
 from selenium import *
 
-token = "1204302236:AAEbjN95KA2OYM1G1BedjcYO_9JuQCOnxiI"
+token = "1439804208:AAGX1fmKci_dthBL0UsZEO6ayCidDYyafNs"
 
 caratteri_da_eliminare = [":", ";",",",".","–"," "]
 link_try = "prova"
