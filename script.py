@@ -31,6 +31,8 @@ def ottieni_link(nome_film):
     opt.add_argument('--disable-gpu')
     opt.add_argument('--no-sandbox')
     opt.add_argument(' --disable-dev-shm-usage')
+    opt.add_argument('--remote-debugging-port=9222')
+    
     
     
     
