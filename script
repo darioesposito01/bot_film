@@ -34,8 +34,14 @@ def ottieni_link(nome_film):
     driver = webdriver.Chrome(execution_path = CHROMEDRIVER_PATH, options=opt)
   
     #driver.maximize_window()
-
+    
     driver.get("https://altadefinizione.dance/")
+    
+    time.sleep(5)
+    popup = driver.find_element_by_class_name("closePopup")
+    popup.click()
+    time.sleep(2)
+    
     
     time.sleep(5)
 
