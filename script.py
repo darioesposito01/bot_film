@@ -31,7 +31,7 @@ def ottieni_link(nome_film):
     opt.add_argument('--disable-gpu')
     opt.add_argument('--no-sandbox')
     opt.binary_location = GOOGLE_CHROME_PATH
-    driver = webdriver.Chrome(execution_path = CHROMEDRIVER_PATH, options=opt)
+    driver = webdriver.Chrome(executable_path= CHROMEDRIVER_PATH, options=opt)
   
     #driver.maximize_window()
     
