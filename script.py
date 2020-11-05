@@ -15,7 +15,7 @@ token = "1439804208:AAGX1fmKci_dthBL0UsZEO6ayCidDYyafNs"
 caratteri_da_eliminare = [":", ";",",",".","–"," "]
 link_try = "prova"
 bot = telegram.Bot(token = token)
-PORT = int(os.environ.get('PORT', 5000))
+
 GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 
