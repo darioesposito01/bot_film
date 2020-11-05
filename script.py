@@ -41,7 +41,8 @@ def ottieni_link(nome_film):
     #driver.maximize_window()
     
     driver.get("https://altadefinizione.dance/")
-    
+    time.sleep(3)
+    driver.save_screenshot("/Users/darioesposito/Desktop/screenshot.png")
     time.sleep(5)
     popup = driver.find_element_by_class_name("closePopup")
     popup.click()
