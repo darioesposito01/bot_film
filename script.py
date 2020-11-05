@@ -177,13 +177,11 @@ def ottieni_link(nome_film):
     return link_da_mand 
 
 def send(update, context):
-    try:
-        l = ottieni_link((update.message.text).lower())
+    l = ottieni_link((update.message.text).lower())
     
-        context.bot.send_message(chat_id= update.effective_chat.id, text="http://"+l)
+    context.bot.send_message(chat_id= update.effective_chat.id, text="http://"+l)
        
-    except:
-         context.bot.send_message(chat_id= update.effective_chat.id, text="deve essersi verificato un problema, riprova togliendo eventiali segni di punteggiatura come (- , : . ;)")
+   
          
     #bot.sendMessage(chat_id="613345494", text=link_da_mand)
 
