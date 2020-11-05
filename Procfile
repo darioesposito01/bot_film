@@ -1,1 +1,1 @@
-app: python script.py
+app: python script
