@@ -32,7 +32,7 @@ def ottieni_link(nome_film):
     opt.add_argument('--no-sandbox')
     opt.add_argument(' --disable-dev-shm-usage')
     opt.add_argument('--remote-debugging-port=9222')
-    
+    opt.add_argument("--disable-blink-features=AutomationControlled")
     
     
     
@@ -44,7 +44,7 @@ def ottieni_link(nome_film):
     
     driver.get("https://altadefinizione.dance/")
     time.sleep(3)
-    '''
+    
     print(driver.page_source)
     driver.save_screenshot("/Users/darioesposito/Desktop/screenshot.png")
     time.sleep(5)
@@ -54,7 +54,7 @@ def ottieni_link(nome_film):
     
     
     time.sleep(5)
-    '''
+    
     cont1 = driver.find_element_by_xpath("/html/body/section[3]/div/div[2]/div[2]/div[1]/div/form/div[1]/input")
     
     cont1.send_keys(nome_film)
