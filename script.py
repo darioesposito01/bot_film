@@ -38,7 +38,7 @@ def ottieni_link(nome_film):
     opt.add_experimental_option('useAutomationExtension', False)
    # opt.add_argument("excludeSwitches", ["enable-automation"])
     #opt.add_argument('useAutomationExtension', False)
-    #opt.add_argument(f"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36")
+    opt.add_argument(f"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36")
     
     
     
