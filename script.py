@@ -43,7 +43,7 @@ def ottieni_link(nome_film):
     #driver.maximize_window()
     
     driver.get("https://altadefinizione.dance/")
-    time.sleep(3)
+    time.sleep(10)
     
     print(driver.page_source)
     driver.save_screenshot("/Users/darioesposito/Desktop/screenshot.png")
