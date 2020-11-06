@@ -12,11 +12,6 @@ from selenium import *
 
 token = "1439804208:AAGX1fmKci_dthBL0UsZEO6ayCidDYyafNs"
 
-coki = [{'domain': '.altadefinizione.dance', 'expiry': 1604682405, 'httpOnly': False, 'name': '_gat', 'path': '/', 'secure': False, 'value': '1'},
-{'domain': 'altadefinizione.dance', 'expiry': 1604855147, 'httpOnly': False, 'name': 'modalCookie', 'path': '/', 'secure': False, 'value': '1'},
-{'domain': '.altadefinizione.dance', 'expiry': 1667754345, 'httpOnly': False, 'name': '_ga', 'path': '/', 'secure': False, 'value': 'GA1.2.2095315643.1604682346'},
-{'domain': '.altadefinizione.dance', 'expiry': 1604768745, 'httpOnly': False, 'name': '_gid', 'path': '/', 'secure': False, 'value': 'GA1.2.1018317917.1604682346'},
-{'domain': '.altadefinizione.dance', 'expiry': 1607274345, 'httpOnly': True, 'name': '__cfduid', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'ddde7743d227080b087ec365c8cdb60851604682345'}]
 
 caratteri_da_eliminare = [":", ";",",",".","–"," "]
 link_try = "prova"
@@ -39,6 +34,8 @@ def ottieni_link(nome_film):
     opt.add_argument(' --disable-dev-shm-usage')
     opt.add_argument('--remote-debugging-port=9222')
     opt.add_argument("--disable-blink-features=AutomationControlled")
+    opt.add_experimental_option("excludeSwitches", ["enable-automation"])
+    opt.add_experimental_option('useAutomationExtension', False)
    # opt.add_argument("excludeSwitches", ["enable-automation"])
     #opt.add_argument('useAutomationExtension', False)
     #opt.add_argument(f"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36")
@@ -50,9 +47,7 @@ def ottieni_link(nome_film):
     driver = webdriver.Chrome(executable_path= CHROMEDRIVER_PATH, options=opt)
   
     #driver.maximize_window()
-    for k in coki:
-        driver.add_cookie(k)
-     
+  
     driver.get("https://altadefinizione.dance/")
     time.sleep(10)
  
