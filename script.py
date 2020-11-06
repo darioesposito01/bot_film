@@ -48,7 +48,7 @@ def ottieni_link(nome_film):
   
     #driver.maximize_window()
   
-    driver.get("https://www.facebook.com/")
+    driver.get("https://altadefinizione.dance/")
     time.sleep(10)
  
     print(driver.page_source)
