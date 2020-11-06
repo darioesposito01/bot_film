@@ -30,6 +30,7 @@ def ottieni_link(nome_film):
     opt.add_argument("--headless")
     #opt.add_argument("--window-size=5000,2800")
     opt.add_argument("--start-maximized")
+    opt.add_argument("--enable-javascript")
     #opt.add_argument('--disable-gpu')
     #opt.add_argument('--no-sandbox')
     #opt.add_argument(' --disable-dev-shm-usage')
