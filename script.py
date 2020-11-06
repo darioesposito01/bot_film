@@ -33,6 +33,7 @@ def ottieni_link(nome_film):
     opt.add_argument(' --disable-dev-shm-usage')
     opt.add_argument('--remote-debugging-port=9222')
     opt.add_argument("--disable-blink-features=AutomationControlled")
+    opt.add_argument(f"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36")
     
     
     
