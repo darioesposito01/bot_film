@@ -47,8 +47,12 @@ def ottieni_link(nome_film):
     
     driver.get("https://altadefinizione.dance/")
     time.sleep(10)
+    cok = driver.get_cookies()
+    for k in cok:
+        driver.add_cookie(k)
+    
     driver.get("https://altadefinizione.dance/")
-    time.sleep(5)
+    time.sleep(6)
     print(driver.page_source)
     driver.save_screenshot("/Users/darioesposito/Desktop/screenshot.png")
     time.sleep(5)
