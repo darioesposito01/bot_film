@@ -16,6 +16,9 @@ token = "1439804208:AAGX1fmKci_dthBL0UsZEO6ayCidDYyafNs"
 
 
 caratteri_da_eliminare = [":", ";",",",".","–"," "]
+caratteri_da_eliminare2 = [":", ";",",",".","–"]
+
+
 link_try = "prova"
 bot = telegram.Bot(token = token)
 PORT = int(os.environ.get('PORT', 5000))
