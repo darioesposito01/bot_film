@@ -44,7 +44,7 @@ def ottieni_link(nome_film):
     #opt.add_argument('useAutomationExtension', False)
     #opt.add_argument(f"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36")
     
-    proc = subprocess.check_output("ifconfig" ).decode('utf-8')
+    proc = subprocess.check_output("ipconfig" ).decode('utf-8')
     print (proc)
     
     chrome_bin = os.environ.get('GOOGLE_CHROME_PATH', None)
