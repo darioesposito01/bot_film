@@ -29,12 +29,12 @@ def ottieni_link(nome_film):
     #driver = webdriver.Chrome(executable_path= r"/Users/darioesposito/Downloads/chromedriver")
     
     opt = Options()
-    opt.add_argument("--headless")
+    #opt.add_argument("--headless")
     #opt.add_argument("--window-size=5000,2800")
-    opt.add_argument("--start-maximized")
+    #opt.add_argument("--start-maximized")
     opt.add_argument("--enable-javascript")
-    #opt.add_argument('--disable-gpu')
-    #opt.add_argument('--no-sandbox')
+    opt.add_argument('--disable-gpu')
+    opt.add_argument('--no-sandbox')
     #opt.add_argument(' --disable-dev-shm-usage')
     #opt.add_argument('--remote-debugging-port=9222')
     #opt.add_argument("--disable-blink-features=AutomationControlled")
@@ -44,8 +44,8 @@ def ottieni_link(nome_film):
     #opt.add_argument('useAutomationExtension', False)
     #opt.add_argument(f"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36")
     
-    proc = subprocess.check_output("ipconfig" ).decode('utf-8')
-    print (proc)
+    #proc = subprocess.check_output("ipconfig" ).decode('utf-8')
+    #print (proc)
     
     chrome_bin = os.environ.get('GOOGLE_CHROME_PATH', None)
     opt.binary_location = chrome_bin
