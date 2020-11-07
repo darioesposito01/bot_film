@@ -26,6 +26,24 @@ def ottieni_link(nome_film):
     link_da_mand = ""
     nomi_film = []
     nomi_film_non_modificati = []
+    
+    nome = nome_film
+    for k in caratteri_da_eliminare2:
+        nome = nome.replace(k, "")
+
+    nome = nome.split()
+    print(nome)
+    nom = ""
+    for j in nome:
+        nom = nom + "+" + j
+
+    nom = nom[1:]
+    print(nom)
+
+
+   
+    
+    
     #driver = webdriver.Chrome(executable_path= r"/Users/darioesposito/Downloads/chromedriver")
     
     opt = Options()
@@ -52,12 +70,12 @@ def ottieni_link(nome_film):
     driver = webdriver.Chrome(executable_path= CHROMEDRIVER_PATH, options=opt)
   
     #driver.maximize_window()
-  
-    driver.get("https://altadefinizione.dance/")
+    time.sleep(2)
+    driver.get("https://altadefinizione.dance/?s="+nom)
     time.sleep(10)
  
     print(driver.page_source)
-    driver.save_screenshot("/Users/darioesposito/Desktop/screenshot.png")
+    #driver.save_screenshot("/Users/darioesposito/Desktop/screenshot.png")
     time.sleep(5)
     popup = driver.find_element_by_class_name("closePopup")
     popup.click()
