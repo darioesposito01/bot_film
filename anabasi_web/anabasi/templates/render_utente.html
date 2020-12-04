@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+<link rel="stylesheet" href="{{url_for('static', filename= 'stile.css')}}" >
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="{{url_for('schermata_amministratore')}}">Gestione Utenti</a></li>
+    <li><a href="{{url_for('logout')}}">Logout</a></li>
+
+  </ul>
+
+<form method="POST" action="/add_link">
+  <div class="custom-control custom-switch">
+    <div>
+    <input name="workset_id" placeholder="id workset">
+  </div>
+      <h4>Anabasi Finanza</h4>
+
+          
+          {% if utente_attuale.anabasi_finanaza == 1 %}
+
+          <input name="anabasi_finanaza">
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 1)}}"><button type="button" class="sub button">Attivo</button></a>
+          {% else %}
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 1)}}"><button type="button" class="sub button">Disabilitato</button></a>
+          {%endif%}
+
+          <h4>Anabasi Co An</h4>
+          {% if utente_attuale.anabasi_co_an == 1 %}
+
+          <input name="anabasi_co_an">
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 2)}}"><button type="button" class="sub button">Attivo</button></a>
+          {% else %}
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 2)}}"><button type="button" class="sub button">Disabilitato</button></a>
+          {%endif%}
+
+          <h4>Anabasi Vendite</h4>
+          {% if utente_attuale.anabasi_vendite == 1 %}
+
+          <input name="anabasi_vendite">
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 3)}}"><button type="button" class="sub button">Attivo</button></a>
+          {% else %}
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 3)}}"><button type="button" class="sub button">Disabilitato</button></a>
+          {%endif%}
+          <h4>Anabasi Produco</h4>
+          {% if utente_attuale.anabasi_produco == 1 %}
+
+          <input name="anabasi_produco">
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 4)}}"><button type="button" class="sub button">Attivo</button></a>
+          {% else %}
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 4)}}"><button type="button" class="sub button">Disabilitato</button></a>
+          {%endif%}
+
+          <h4>Anabasi Logistica</h4>
+          {% if utente_attuale.anabasi_logistica == 1 %}
+
+          <input name="anabasi_logistica">
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 5)}}"><button type="button" class="sub button">Attivo</button></a>
+          {% else %}
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 5)}}"><button type="button" class="sub button">Disabilitato</button></a>
+          {%endif%}
+          <h4>Anabasi Crisi</h4>
+          {% if utente_attuale.anabasi_crisi == 1 %}
+          <input name="anabasi_crisi">
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 6)}}"><button type="button" class="sub button">Attivo</button></a>
+          {% else %}
+          <a href="{{url_for('disattiva_av', anabasi_servizio = 6)}}"><button type="button" class="sub button">Disabilitato</button></a>
+          {%endif%}
+          <div>
+          <input type="submit" class = "sub button">
+          </div>
+       </form>
+  </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</html>

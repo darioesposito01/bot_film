@@ -1,0 +1,328 @@
+/*
+  Copyright (c) Microsoft Corporation.
+  Licensed under the MIT license.
+*/
+html , body{
+
+  height: 100%;
+}
+@font-face {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+  
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+}
+body{
+
+    background-color: white;
+
+}
+
+header {
+    background-color: #007FFF;
+    
+    width: 100%;
+}
+
+header > p {
+    color: #FFFFFF;
+    font: bold 1.6em "segoe ui", arial, sans-serif;
+    margin-left: 31px;
+    padding-top: 20px;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+section#text-container > div > p {
+    font: 1.2em "segoe ui", arial, sans-serif;
+}
+
+section#report-container {
+    height: calc(0.5625 * 50vw); /* 16:9 aspect ratio */
+}
+
+@media only screen and (max-width: 575px) {
+    section#report-container {
+        height: calc(0.5625 * 100vw); /* 16:9 aspect ratio */
+    }
+}
+
+footer > p {
+    font: 1em "segoe ui", arial, sans-serif;
+}
+
+iframe {
+    border: none;
+}
+
+.icon{
+
+  width: 70px;
+  height: 70px;
+
+}
+.button {
+    background-color: #1694bb; /* Green */
+    
+    cursor: pointer;
+    width: 30%;
+    height: 50%;
+    
+  }
+
+  .button:after {
+    
+    padding-bottom: 100%;
+  }
+
+  .button {
+    transition-duration: 0.4s;
+  }
+  
+  .button:hover {
+    
+    background-color: #1dbcc700; /* Green */
+    color: white;
+  }
+
+.butt {
+    font-size: 20px;
+    margin: 3px;
+    float:left;
+    border: none;
+    transition: transform .2s;
+    width:32.8%;
+    height: 38vh;
+    cursor:pointer;
+}
+@media (max-width: 1300px){
+
+.butt{
+    width: 100%;
+
+  }
+
+}
+
+.butt:hover {
+  transform: scale(0.9); 
+    
+    color:white;
+}
+
+@keyframes scale_n {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.col0{
+  background-color: #118DFF;
+}
+
+.col1{
+  background-color: #118DFF;
+}
+.col2{
+  background-color: #118DFF;
+}
+.col3{
+  background-color: #118DFF;
+}
+.col4{
+  background-color: #118DFF;
+}
+.col5{
+  background-color: #118DFF;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-500%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+
+
+  
+.a1 {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    
+    
+    
+  }
+
+
+  @keyframes slideInFromDown {
+    0% {
+      transform: translateY(-500%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+.a2 {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 2s ease-out 0s 1 slideInFromDown;
+    
+    
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(500%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+.a3 {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 3s ease-out 0s 1 slideInFromRight;
+    
+    
+  }
+
+  
+.a4 {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 4s ease-out 0s 1 slideInFromLeft;
+    
+    
+  }
+
+@keyframes slideInFromUp {
+    0% {
+      transform: translateY(500%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+.a5 {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 5s ease-out 0s 1 slideInFromUp;
+    
+    
+  }
+
+
+.a6 {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 6s ease-out 0s 1 slideInFromRight;
+    
+    
+  }
+
+
+@keyframes anim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.rev{
+  animation: 4s ease-out 0s 1 anim;
+}
+
+@keyframes showrep {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.lat{
+    
+    width: 100%;
+    float: left;
+
+}
+
+@keyframes fade {
+  0%{
+    transform: scale(1.0);
+  }
+  100%{
+
+          transform: scale(2.0);
+          opacity: 0;
+          visibility: hidden;
+  }
+}
+
+.line-1{
+  border-top: 20px solid transparent;
+  top: 50%;  
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.bu {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #0b69d4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.bu:hover {
+  
+  
+  background-color: #0bbbda;
+  color: white;
+  
+  right: 0;
+}
+
+.ind{
+  float: right;
+}
